@@ -1,8 +1,8 @@
 FLASK_APP=server.py
 FLASK_ENV=development
-MYSQL_DATABASE_URI=mysql://root:1111@localhost/goupDB
-HOST=127.0.0.1
+MYSQL_DATABASE_URI=mysql://admin:goupgoup@goup-aws.cthuxla64gem.us-east-1.rds.amazonaws.com/goupdb
+HOST=goup-aws.cthuxla64gem.us-east-1.rds.amazonaws.com
 PORT=3306
-USER=root
-PASSWORD=1111
+USER=admin
+PASSWORD=goupgoup
 SECRET_KEY=change-this-later

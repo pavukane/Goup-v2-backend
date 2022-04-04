@@ -22,6 +22,7 @@ def init_app():
     # init
     cors.init_app(app, supports_credentials=True, origins=["http://localhost:3000"] )
     db.init_app(app)
+
     app.config["SESSION_SQLALCHEMY"] = db
     migrate.init_app(app, db)
 
