@@ -34,7 +34,7 @@ class User(UserMixin, db.Model):
 
     def is_following(self, user):
         return self.followed.filter(
-            followers.c.follower_id == user.id
+            followers.c.followed_id == user.id
         ).count() > 0
 
     def follow(self, user):
@@ -53,6 +53,9 @@ class User(UserMixin, db.Model):
         ).order_by(
             Post.timestamp.desc()
         )
+
+    def get_id(self):
+        return self.id
 
 
 class Post(db.Model):
@@ -74,4 +77,5 @@ class Post(db.Model):
                 "username": self.author.username,
             }
         }
+
 
